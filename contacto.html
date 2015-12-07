@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+
+
+
+
+
+  
+ <meta name="description" content=""> 
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+   
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <style type="text/css">
+    
+    .img{width:10px;
+         height:10px;}
+    
+.navbar {margin-bottom:0}
+
+      html { height: 100% }
+      body { height: 100%; margin: 0; padding: 0;}
+      #map-canvas { height: 80% ; margin-top: 0;}
+      .correo{text-align: center;}
+      .pas{ bottom:0;}
+    .btn{ 
+     width: 60%;
+     margin-left: 20%;}
+#formato{margin-bottom:15px;
+ 
+ }
+
+
+body {
+background-color: #222    
+    
+}    
+    
+    
+    </style>
+    <script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCV2RVEmAPpmtsI6utvO3mcnoc7YFNbxHU ">
+    </script>
+    <script type="text/javascript">
+function initialize() {
+  var myLatlng = new google.maps.LatLng(28.631565, -106.074916);
+  var mapOptions = {
+    zoom: 16,
+    center: myLatlng
+  }
+  var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+   
+ var contentString = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading">BUZZ360MX</h1>'+
+      '<div id="bodyContent">'+
+      '<h2>Calle Libertad </h2>'+
+      '<h2>Correo :contacto@buzz-360.com</h2>'+
+      '<h2>Tel. 618-13-00-685</h2>'+
+      '</div>'+
+      '</div>';
+
+
+ var infowindow = new google.maps.InfoWindow({
+      content: contentString });
+
+
+
+var image ='Logo Buzz invertido_final2.png';
+  var myLatLng = new google.maps.LatLng(28.631565, -106.074916);
+  var beachMarker = new google.maps.Marker({
+      position: myLatLng,
+      map: map,
+      icon: image
+  });
+
+
+google.maps.event.addListener(beachMarker, 'click', function() {
+    infowindow.open(map,beachMarker);
+  });
+
+  
+  
+  
+}
+
+
+  function detectBrowser() {
+  var useragent = navigator.userAgent;
+  var mapdiv = document.getElementById("map-canvas");
+
+  if (useragent.indexOf('iPhone') != -1 || useragent.indexOf('Android') != -1 ) {
+    mapdiv.style.width = '100%';
+    mapdiv.style.height = '100%';
+  } else {
+    mapdiv.style.width = '600px';
+    mapdiv.style.height = '800px';
+  }
+}
+
+   google.maps.event.addDomListener(window, 'load', initialize);
+   
+   
+   
+    
+
+
+
+    </script>
+    
+<script>
+
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-30740533-3', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+    
+    
+  </head>
+  <body>
+ <nav class="navbar navbar-inverse" role="navigation">
+ <div class="navbar-header">
+ <button type="button" class="navbar-toggle" data-toggle="collapse" 
+         data-target="#example-navbar-collapse">
+         <span class="sr-only">Toggle navigation</span>
+         <span class="icon-bar"></span>
+         <span class="icon-bar"></span>
+         <span class="icon-bar"></span>
+      </button>
+ 
+      <a class="navbar-brand" href="#"><img src="bzzE50.png" width="58" height="20"> BUZZ 360 </a>
+   </div>
+   
+ <div class="collapse navbar-collapse" id="example-navbar-collapse">  
+  <ul class="nav navbar-nav">
+<li class="active"> <a href="index.html">INICIO</a></li>
+  <li><a href="nosotros.html">NOSOTROS</a></li>
+  <li><a href="servicios.html"> SERVICIOS</a></li>
+  <li><a href="clientes.html">CLIENTES</a></li>
+  <li><a href="contacto.html">CONTACTO</a></li>
+  </ul>
+</div>
+    
+</nav> 
+  
+    <div id="map-canvas" />
+    
+
+
+  </div>
+  
+  
+
+
+
+
+<div id="formato">
+<script type="text/javascript" src="http://spanish.jotform.com/jsform/50968172615865"></script>
+</div>
+
+  </body>
+</html>
